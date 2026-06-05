@@ -1,0 +1,341 @@
+/*
+Theme Name: Edbase2:カスタマイズ
+Description: 練習用サイトEdbaseのステップアップ用
+Author: Skillhub
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: gray;
+}
+
+.header-nav{
+  margin-left: auto;
+  align-self: center;
+}
+
+.header-logo{
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.header-nav ul {
+  display: flex;
+  padding-left: 0;
+}
+
+.header-nav li {
+  list-style: none;
+  margin-right: 1rem;
+}
+
+header .hamburger{
+  display: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  margin-left: auto;
+  align-self: center;
+}
+
+header .hamburger-bar{
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  height: 3px;
+  background-color: #666;
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease, top 0.2s ease;
+}
+
+header .hamburger-bar:nth-child(1){ top: 12px; }
+header .hamburger-bar:nth-child(2){ top: 19px; }
+header .hamburger-bar:nth-child(3){ top: 26px; }
+
+header .hamburger[aria-expanded="true"] .hamburger-bar:nth-child(1){
+  top: 19px;
+  transform: rotate(45deg);
+}
+header .hamburger[aria-expanded="true"] .hamburger-bar:nth-child(2){
+  opacity: 0;
+}
+header .hamburger[aria-expanded="true"] .hamburger-bar:nth-child(3){
+  top: 19px;
+  transform: rotate(-45deg);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  background: white;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.row {
+  display: flex;
+}
+
+section{
+  margin-bottom: 5rem;
+}
+
+main {
+  flex: 3;
+  margin-right: 3rem;
+}
+
+aside {
+  flex: 1;
+}
+
+/* ========================== */
+/* お問い合わせ
+/* ========================== */
+.inquiry {
+  display: flex;
+}
+
+.inquiry section {
+  margin-left: 2rem;
+}
+
+input {
+  margin: 1rem 0;
+}
+/* ========================== */
+/* 会社概要
+/* ========================== */
+/* table, th, td {
+  border: 1px solid gray;
+  border-collapse: collapse;
+}
+*/
+
+.company-overview table {
+  width: 100%;
+  table-layout: fixed;
+  border-top: 1px solid #d2d2d2;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: left;
+  font-weight: 400;
+}
+
+.company-overview table th,
+.company-overview table td {
+  vertical-align: top;
+  display: table-cell;
+  padding-block: 24px;
+  padding-inline: 0.5em;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.company-overview table th {
+  width: 30%;
+  min-width: 180px;
+  background-color: #ebebeb;
+  font-weight: 500;
+  text-align: center;
+}
+
+.company-overview table p:first-child {
+  margin-top: 0;
+}
+
+.company-overview table p:last-child {
+  margin-bottom: 0;
+}
+
+.company-overview table ul {
+  margin-block: 0;
+}
+
+.company-message {
+  margin-bottom: 3rem;
+}
+
+.company-message .image {
+  flex: 1;
+}
+
+.company-message .message {
+  flex: 2;
+  padding-left: 2rem;
+}
+
+.company-message .gacha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #eaeef5;
+}
+
+.company-message .gacha h3 {
+  margin-bottom: 0;
+}
+
+#gacha-display{
+  width: 100%;
+  background-color: #ffffff;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 1em 0.75em;
+  text-align: center;  
+}
+
+#gacha-button{
+  color: #ffffff;
+  background-color: #1068c7;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 4px;
+}
+
+#gacha-button:hover {
+  background-color: #268af5;
+}
+
+/* ========================== */
+/* ブログ
+/* ========================== */
+.postcard {
+  display: flex;
+}
+
+.postcard .img {
+  flex: 1;
+}
+
+.postcard .desc {
+  flex: 3;
+  padding-left: 1rem;
+}
+
+footer {
+  background: dimgray;
+  color: white;
+  margin-top: 3rem;
+  padding: 3rem;
+  text-align: center;
+}
+
+/* ===============================================
+ * スマホ表示 - 幅767px以下の場合
+ * ============================================= */
+@media (max-width:767px) {
+  header {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .header-logo {
+    margin-top: 0;
+  }
+
+  .header-logo h1{
+    font-size: 1.5em;
+  }
+
+  header .hamburger {
+    display: block;
+  }
+
+  .header-nav {
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    width: 100%;
+    margin-left: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 10;
+  }
+
+  .header-nav.is-open {
+    max-height: 200px;
+  }
+
+  .header-nav ul {
+    flex-direction: column;
+  }
+
+  .header-nav ul li {
+    width: 100%;
+    margin-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .header-nav ul li a {
+    display: block;
+    padding: 1em;
+  }
+
+  main {
+    margin-right: 0;
+  }
+
+  .container{
+    padding: 1rem;
+  }
+
+  .row,
+  .inquiry {
+    flex-direction: column;
+  }
+
+  /* ========================== */
+  /* 会社概要
+  /* ========================== */
+  .company-overview {
+    width: 100%;
+    overflow-x: scroll;
+
+  }
+  .company-overview table {
+    min-width: 400px;
+  }
+
+  .company-message .message {
+    flex: 1;
+    padding-left: 0;
+  }
+
+  /* ========================== */
+  /* ブログ
+  /* ========================== */
+  .postcard {
+    margin-bottom: 2.5rem;
+  }
+
+  .postcard .img {
+    flex: 2;
+  }
+
+  .postcard h3 {
+    margin: 0;
+  }
+
+  .description {
+    margin-left: 0;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+  }
+}
