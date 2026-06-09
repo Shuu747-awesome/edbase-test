@@ -4,27 +4,120 @@
     
     <div class="row">
       <main>
-        <h2>格言ガチャ</h2>
-        <div id="gacha-display">
-          社長が感銘を受けた格言集！<br>
-          下記ボタンをクリック/タップで表示します。
-        </div>
-        <button id="gacha-button">格言を表示</button>
-        <h2>会社概要</h2>
-        <table>
-          <tr>
-            <th>会社名</th>
-            <td>エドベース株式会社</td>
-          </tr>
-          <tr>
-            <th>英語表記</th>
-            <td>Edbase Co. Ltd.</td>
-          </tr>
-          <tr>
-            <th>代表取締役</th>
-            <td>吉田 光利</td>
-          </tr>
-        </table>
+        <section class="company-overview">
+          <h2>会社概要</h2>
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  <p>社名</p>
+                </th>
+                <td>
+                  <p>エドベース株式会社</p>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <p>英文社名</p>
+                </th>
+                <td>
+                  <p>Edbase Co. Ltd.</p>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <p>創業</p>
+                </th>
+                <td>
+                  <p>2020年7月15日</p>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <p>本社所在地</p>
+                </th>
+                <td>
+                  <p>
+                    〒153-0051<br>
+                    東京都目黒区上目黒XX-XX
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <p>代表取締役社長</p>
+                </th>
+                <td>
+                  <p>吉田 光利</p>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <p>代表電話</p>
+                </th>
+                <td>
+                  <p>
+                    03-1234-4321</span>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <p>事業内容</p>
+                </th>
+                <td>
+                  <ul>
+                    <li>教育事業</li>
+                    <li>セミナー・研修</li>
+                    <li>オンラインスクール</li>
+                    <li>Webシステム</li>
+                    <li>UI・デザイン</li>
+                    <li>ディレクション</li>
+                    <li>プロジェトマネージメント</li>
+                    <li>フロントエンド開発</li>
+                    <li>システム構築・保守</li>
+                    <li>インフラ構築・保守</li>
+                    <li>アプリ開発</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <p>関連会社</p>
+                </th>
+                <td>
+                  <ul>
+                    <li><a href="https://skillhub.jp/" class="link" target="_blank">Skillhub</a></li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="company-message">
+          <h2>代表挨拶</h2>
+          <div class="row">
+            <div class="image">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/ceoimage.jpg" alt="代表イメージ画像">
+            </div>
+            <div class="message">
+              <h3>吉田 光利</h3>
+              <p>
+                山路を登りながら、こう考えた。<br>
+                智に働けば角が立つ。情に棹さおさせば流される。意地を通とおせば窮屈だ。とかくに人の世は住みにくい。住みにくさが高こうじると、安い所へ引き越したくなる。<br>
+                どこへ越しても住みにくいと悟さとった時、詩が生れて、画えが出来る。
+              </p>
+            </div>
+          </div>
+          <div class="gacha">
+            <h3>格言ガチャ</h3>
+            <p>私が感銘を受けた格言を紹介します。</p>
+            <div id="gacha-display">
+              下記ボタンをクリック/タップで表示します。
+            </div>
+            <button id="gacha-button">格言を表示</button>
+          </div>
+        </section>
       </main>
       
       <aside>
