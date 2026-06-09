@@ -14,7 +14,7 @@
 <body>
   <div class="container">
     <header>
-      <h1>エドベース株式会社</h1>
+      <h1>Edobase株式会社</h1>
       <nav class="header-nav">
         <?php wp_nav_menu(); ?>
       </nav>
